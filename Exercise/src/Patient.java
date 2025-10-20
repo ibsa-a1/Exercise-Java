@@ -32,6 +32,11 @@ public class Patient {
                     String new_name = input.nextLine(); // Now new_name is a working String
                     patient[patient_num - 1] = new_name;
                 }
+                System.out.println("You Modified the Name of " + patient[patient_num - 1] + " Correctly.");
+                System.out.println("Now Your Modified Patients are: ");
+                for (int i = 0; i < patient.length; i++) {
+                    System.out.println((i + 1) + ". " + patient[i]);
+                }
                 break;
             case 2:
                 System.out.println("Enter the number of paitent you want to delete");
