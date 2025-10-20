@@ -22,14 +22,14 @@ public class Patient {
             case 1:
                 System.out.println("Enter The Number of Patient You Want to Modify..");
                 int patient_num = input.nextInt();
+                input.nextLine(); // Added to consume the newline character
                 if (patient_num > patient.length || patient_num <= 0) {
                     System.out.println("Invalid Patient Number.");
                     break;
                 } else {
-                    String new_name = new String();
                     System.out.println("You Chose " + patient[patient_num - 1] + "To Modify Name.");
                     System.out.println("Enter the new First Name: ");
-                    new_name = input.nextLine();
+                    String new_name = input.nextLine(); // Now new_name is a working String
                     patient[patient_num - 1] = new_name;
                 }
                 break;
